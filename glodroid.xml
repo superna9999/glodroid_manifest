@@ -5,21 +5,22 @@
   <remote  name="gitlab"   fetch="https://gitlab.freedesktop.org/" />
   <remote  name="glodroid" fetch="https://github.com/glodroid/" />
   <remote  name="megous"   fetch="https://megous.com/git/" />
+  <remote  name="amlogic" fetch="https://github.com/superna9999/" />
 
   <extend-project name="platform/external/arm-trusted-firmware" revision="de9d0d7c7ffc592e34f9c8c38c1971556d4d4de8" />
   <remove-project name="platform/external/mesa3d" />
   <remove-project name="platform/external/u-boot" />
   <remove-project name="platform/external/drm_hwcomposer" />
 
-  <project path="device/glodroid"        remote="glodroid" name="glodroid_device.git"        revision="refs/heads/next" />
+  <project path="device/glodroid"        remote="amlogic" name="glodroid_device.git"        revision="refs/heads/amlogic-next" />
   <project path="prebuilts/applications" remote="glodroid" name="glodroid_external_apks.git" revision="refs/tags/apps-v2" />
   <project path="external/iio-sensors-hal" remote="glodroid" name="android-iio-sensors-hal.git" revision="refs/heads/staging" />
 
   <project path="external/gbm_gralloc"     remote="glodroid" name="glodroid_forks.git" revision="refs/tags/gbm_gralloc-v2" clone-depth="1" />
   <project path="external/drm_hwcomposer"  remote="glodroid" name="glodroid_forks.git" revision="refs/tags/drm_hwcomposer-v1" clone-depth="1" />
-  <project path="external/mesa3d"          remote="glodroid" name="glodroid_forks.git" revision="refs/tags/mesa3d-v5" clone-depth="1" />
-  <project path="external/u-boot"          remote="glodroid" name="glodroid_forks.git" revision="refs/tags/uboot-v4" clone-depth="1" />
-  <project path="kernel/glodroid-sunxi"    remote="glodroid" name="glodroid_forks.git" revision="refs/heads/kernel-sunxi-next" clone-depth="1" />
+  <project path="external/mesa3d"          remote="glodroid" name="glodroid_forks.git" revision="refs/heads/mesa3d-next" clone-depth="1" />
+  <project path="external/u-boot"          remote="amlogic" name="glodroid_forks.git" revision="refs/heads/uboot-amlogic-next" clone-depth="1" />
+  <project path="kernel/glodroid-sunxi"    remote="amlogic" name="glodroid_forks.git" revision="refs/heads/kernel-sunxi-amlogic-next" clone-depth="1" />
   <project path="kernel/glodroid-broadcom" remote="glodroid" name="glodroid_forks.git" revision="refs/heads/kernel-broadcom-next" clone-depth="1" />
 
   <project path="prebuilts/gcc/linux-x86/arm/gcc-linaro-arm-linux-gnueabihf"
@@ -34,5 +35,6 @@
   <project path="vendor/raspberry/firmware" remote="github" name="raspberrypi/firmware.git" revision="9fd925bf1afd3a888d7ba13bad5815e432a071b4" clone-depth="1" />
   <project path="vendor/raspberry/firmware-nonfree" remote="github" name="RPi-Distro/firmware-nonfree.git" revision="98e815735e2c805d65994ccc608f399595b74438" clone-depth="1" />
   <project path="vendor/megous/firmware"  remote="megous"           name="linux-firmware"   revision="4ec2645b007ba4c3f2962e38b50c06f274abbf7c" clone-depth="1" />
+  <project path="vendor/amlogic/amlogic-boot-fip" remote="github" name="LibreELEC/amlogic-boot-fip.git" revision="refs/heads/master" clone-depth="1" />
 
 </manifest>
